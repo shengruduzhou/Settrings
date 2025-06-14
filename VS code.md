@@ -2,6 +2,11 @@
 ```
 Format On Save - on
 Default Formatter - Prettier - Code formatter
+```
+
+#### Frontend
+```
+
 
 .prettierrc.json
 {
@@ -41,4 +46,46 @@ import prettierConfig from "eslint-config-prettier"
   pluginReactConfig,
   prettierConfig,
 
+```
+
+### Backend
+```
+tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true
+  }
+}
+
+mkdir src
+cd src
+
+index.ts
+import express from 'express';
+
+const app = express()
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello from the Node.js Backend Server!');
+});
+
+app.listen(port, () => {
+  console.log(`✅ Server is running successfully at http://localhost:${port}`);
+});
+
+packpage.json
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts"
+  },
+
+```
 
