@@ -4,9 +4,8 @@ Format On Save - on
 Default Formatter - Prettier - Code formatter
 ```
 
-#### Frontend
+### Frontend
 ```
-
 
 .prettierrc.json
 {
